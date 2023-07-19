@@ -20,7 +20,7 @@
             @foreach ($cocktails as $cocktail)
                 <tr>
                     <th scope="row">{{ $cocktail->id }}</th>
-                    <td>{{ $cocktail->strName }}</td>
+                    <td>{{ $cocktail->strDrink }}</td>
                     <td>{{ $cocktail->strInstructionsIT }}</td>
                     <td>{{ $cocktail->strDrinkThumb }}</td>
                     <td>{{ $cocktail->strAlcoholic }}</td>

@@ -15,6 +15,14 @@ return new class extends Migration
     {
         Schema::create('cocktails', function (Blueprint $table) {
             $table->id();
+
+            $table->string("strName", 30);
+            $table->text("strInstructionsIT");
+            $table->string("strDrinkThumb", 1000);
+            $table->string("strAlcoholic", 50);
+            $table->date("dateModified");
+            $table->string("strCategory", 30);
+
             $table->timestamps();
         });
     }

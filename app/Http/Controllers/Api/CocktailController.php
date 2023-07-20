@@ -26,4 +26,14 @@ class CocktailController extends Controller
             'results'    => $cocktail,
         ]);
     }
+
+    public function random()
+    {
+        $cocktails = Cocktail::inRandomOrder()->limit(9)->get();
+
+        return response()->json([
+            'success'    => true,
+            'results'    => $cocktails,
+        ]);
+    }
 }

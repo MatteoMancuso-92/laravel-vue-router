@@ -17,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('cocktails', [CocktailController::class, 'index'])->name('api.cocktails.index');
+Route::get('cocktails/{cocktail}', [CocktailController::class, 'show'])->name('api.cocktails.show');

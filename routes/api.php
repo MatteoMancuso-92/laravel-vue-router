@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\Api\CategoryController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\LeadController;
+use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\CocktailController;
 
 /*
@@ -24,3 +25,5 @@ Route::get('cocktails', [CocktailController::class, 'index'])->name('api.cocktai
 Route::get('cocktails/random', [CocktailController::class, 'random'])->name('api.cocktails.random');
 Route::get('cocktails/{cocktail}', [CocktailController::class, 'show'])->name('api.cocktails.show');
 Route::get('category', [CategoryController::class, 'index'])->name('api.category.index');
+
+Route::post('leads/', [LeadController::class, 'store'])->name('api.leads.store');

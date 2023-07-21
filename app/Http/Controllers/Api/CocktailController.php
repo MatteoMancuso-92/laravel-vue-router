@@ -11,7 +11,12 @@ class CocktailController extends Controller
     public function index(Request $request)
     {
 
-        $cocktails = Cocktail::all();
+        $category = $request->query('category');
+        if ($category) {
+            $cocktails = Cocktail::where('strCategory', $category)->get();
+        } else {
+            $cocktails = Cocktail::all();
+        }
 
         return response()->json([
             'success'    => true,

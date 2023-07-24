@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\LeadController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\CocktailController;
 
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
